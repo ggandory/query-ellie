@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
-//뭐지?ㅇㅇ
+//뭐지?
 export default function Products() {
   const [checked, setChecked] = useState(false);
   const handleChange = () => setChecked((prev) => !prev);
