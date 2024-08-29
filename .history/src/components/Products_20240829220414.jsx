@@ -3,20 +3,20 @@ import { useQuery } from "@tanstack/react-query";
 
 export default function Products() {
   const [checked, setChecked] = useState(false);
+
+  //const [loading, error, products] = useProducts({ salesOnly: checked });
   const handleChange = () => setChecked((prev) => !prev);
   const {
     isLoading,
     error,
     data: products,
   } = useQuery({
-    queryKey: ["products", checked],
+    queryKey: ["products"],
 
     queryFn: async () => {
       console.log("fetching...");
 
-      return fetch(`data/${checked ? "sale" : ""}products.json`).then((res) =>
-        res.json()
-      );
+      return fetch(`data/products.json`).then((res) => res.json());
     },
   });
   if (isLoading) return <p>Loading...</p>;
