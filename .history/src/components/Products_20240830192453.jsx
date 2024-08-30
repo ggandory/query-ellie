@@ -6,25 +6,24 @@ export default function Products() {
   const handleChange = () => setChecked((prev) => !prev);
   const {
     isLoading,
-
     error,
-
     data: products,
-  } = useQuery({
-    queryKey: ["products", checked],
+  } = useQuery(
+    {
+      queryKey: ["products", checked],
 
-    queryFn: async () => {
-      console.log("fetching...");
+      queryFn: async () => {
+        console.log("fetching...");
 
-      return fetch(`data/${checked ? "sale_" : ""}products.json`).then((res) =>
-        res.json()
-      );
+        return fetch(`data/${checked ? "sale" : ""}products.json`).then((res) =>
+          res.json()
+        );
+      },
     },
-
-    staleTime: 5000,
-  });
-
-  //캐시기간 늘리기
+    {
+      staleTime: 1000 * 60 * 5,
+    }
+  );
   if (isLoading) return <p>Loading...</p>;
 
   if (error) return <p>{error.message}</p>;
