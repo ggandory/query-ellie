@@ -2620,6 +2620,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tanstack/query-devtools@npm:5.52.3":
+  version: 5.52.3
+  resolution: "@tanstack/query-devtools@npm:5.52.3"
+  checksum: 996a3277f796ef9c88722d0200d0f6a5650d8ecc7f26b4134b73402c3de5c216c4484e057c411ff13d41b8393e0d615062a39684fa1be6b548c3f65270b2f059
+  languageName: node
+  linkType: hard
+
+"@tanstack/react-query-devtools@npm:^5.52.3":
+  version: 5.52.3
+  resolution: "@tanstack/react-query-devtools@npm:5.52.3"
+  dependencies:
+    "@tanstack/query-devtools": 5.52.3
+  peerDependencies:
+    "@tanstack/react-query": ^5.52.3
+    react: ^18 || ^19
+  checksum: 47aa2963e2dcaa36b85499d23021293694295fd83dac34003492413a978845c5dd3484b94929629186a4cf4410928090600343fb751646d4ec8cc682944abc4b
+  languageName: node
+  linkType: hard
+
 "@tanstack/react-query@npm:^5.52.2":
   version: 5.52.2
   resolution: "@tanstack/react-query@npm:5.52.2"
@@ -10996,6 +11015,7 @@ __metadata:
   dependencies:
     "@tanstack/eslint-plugin-query": ^5.52.0
     "@tanstack/react-query": ^5.52.2
+    "@tanstack/react-query-devtools": ^5.52.3
     "@testing-library/jest-dom": ^5.14.1
     "@testing-library/react": ^13.0.0
     "@testing-library/user-event": ^13.2.1

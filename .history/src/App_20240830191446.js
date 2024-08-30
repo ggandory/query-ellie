@@ -10,7 +10,7 @@ export default function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <MainProducts />
-      <ReactQueryDevtools initialIsOpen={true} />
+      <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
   );
 }
