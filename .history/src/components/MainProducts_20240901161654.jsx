@@ -22,7 +22,7 @@ export default function MainProducts() {
       </div>
       <button
         onClick={() => {
-          client.invalidateQueries(["products", false]); //여기서 false를 없애면 모든걸 invalidate처리를 해버린다는데 뭔말이니..
+          client.invalidateQueries(["products", false]);
         }}
       >
         정보가 업데이트 되었음!

@@ -14,7 +14,7 @@ export default function Products() {
     queryKey: ["products", checked],
 
     queryFn: async () => {
-      console.log("fetching...", checked);
+      console.log("fetching...");
 
       return fetch(`data/${checked ? "sale_" : ""}products.json`).then((res) =>
         res.json()
